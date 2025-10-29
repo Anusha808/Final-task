@@ -14,7 +14,7 @@ body, html {
   align-items: center;
   justify-content: flex-start;
   height: 100vh;
-  background-image: url("D:/Jai/frontend/src/components/images/image1.jpg");
+  background-image: url("../../assets/image2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
