@@ -1,0 +1,121 @@
+/* Reset and Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  background-color: #000;
+}
+
+/* 🌄 Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  background-image: url("D:/Jai/frontend/src/components/images/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+}
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* 🟠 Home Button (Full width bar, 20px gap on sides) */
+.home-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  background-color: rgb(245, 108, 40);
+  color: white;
+  border: none;
+  padding: 25px 0; /* slightly taller */
+  font-size: 24px; /* 🔥 Increased font size */
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 18px; /* smoother corners */
+  text-align: left;
+  padding-left: 70%;
+  transition: text-decoration 0.3s;
+}
+
+/* Hover — underline only */
+.home-btn:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Active (Clicked) */
+.home-btn.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ✨ Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 100px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-content h1 {
+  font-size: 66px; /* increased */
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 26px; /* increased text size */
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+/* 💗 Get Started Button (Pink, curved, larger text) */
+.get-started-btn {
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  padding: 18px 45px; /* slightly larger button */
+  border-radius: 40px;
+  font-size: 22px; /* larger text */
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(255, 105, 180, 0.5);
+}
+
+.get-started-btn:hover {
+  background-color: #ff4da6;
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.6);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+/* 🌈 Main Container */
+.accomplish-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("../../assets/image1.jpg"); /* 🖼️ Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* 🖋️ Heading styling */
+.accomplish-text h1 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 5px 0;
+  color: #000;
+}
+
+.accomplish-text p {
+  max-width: 700px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 30px auto 50px;
+  line-height: 1.6;
+}
+
+/* 🧩 Layout for both lists and center icon */
+.accomplish-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Left and Right Lists */
+.accomplish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 250px;
+}
+
+.accomplish-list.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.accomplish-list.right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* 🟩 Each list item */
+.accomplish-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+  position: relative;
+}
+
+/* ➖ White underline (longer + visible) */
+.accomplish-item::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 100%; /* ✅ full-width underline */
+  background-color: #ffffff;
+  opacity: 1;
+  border-radius: 2px;
+}
+
+/* 🖤 Black Check Icon */
+.check-icon {
+  color: #000;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* ✍️ Text Style */
+.accomplish-item span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+  flex-grow: 1;
+}
+
+/* 🌀 Center Circle and Icon */
+.accomplish-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.bg-circle {
+  width: 500px;
+  height: 500px;
+  opacity: 0.9;
+}
+
+.center-icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.center-icon {
+  width: 80px;
+  height: 80px;
+}
+
+/* 🟢 Create Button */
+.button-wrapper {
+  margin-top: 50px;
+}
+
+.create-button {
+  display: inline-block;
+  padding: 15px 50px;
+  background-color: #09b97b; /* ✅ Dark green background */
+  color: black; /* ✅ White text for better contrast */
+  font-weight: 400; /* ✅ Normal weight, not bold */
+  font-size: 22px;
+  border-radius: 8px; /* ✅ Slightly rounded corners */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.create-button:hover {
+  background-color: #12eaa2; /* ✅ Slightly lighter green on hover */
+  transform: scale(1.05); /* ✅ Smooth hover effect */
+}

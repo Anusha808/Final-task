@@ -1,0 +1,98 @@
+.scroll-numbers-section {
+  position: relative;
+  height: 400vh;
+  background: linear-gradient(180deg, #9cc2b5, #7ca89d);
+  overflow: hidden;
+}
+
+/* 🌀 Curved path */
+.snake-path {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 2800px;
+}
+
+.snake-path path {
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.2s ease-out;
+}
+
+/* 🌟 Star at start of curve */
+.star {
+  position: absolute;
+  top: 90px;
+  left: calc(50% - 320px); /* aligns with curve start */
+  font-size: 40px;
+  color: gold;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.star.visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: pulseStar 2s infinite ease-in-out;
+}
+
+@keyframes pulseStar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 🧮 Numbers */
+.number {
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.number.visible {
+  opacity: 1;
+}
+
+.number h1 {
+  font-size: 70px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.number p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+/* Positions matching curve */
+.number-1 {
+  top: 8%;
+  left: 25%;
+}
+
+.number-2 {
+  top: 35%;
+  right: 25%;
+}
+
+.number-3 {
+  top: 65%;
+  left: 30%;
+}
+
+.number-4 {
+  top: 90%;
+  right: 20%;
+}
